@@ -13,3 +13,14 @@ GC summary:
 
     `-XX:-UseAdaptiveSizePolicy`
 *  GC log除了肉眼分析，还可以使用GCEasy（在线）和GCViewer（离线）工具
+*  Command sample to get GC log:
+
+    `java -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:gc.demo.para.ms1.mx1.1.noad.log -Xms1g -Xmx1g -XX:+UseParallelGC -XX:-UseAdaptiveSizePolicy GCLogAnalysis`
+
+    `java -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:gc.demo.ser.ms1.mx1.1.log -Xms1g -Xmx1g -XX:+UseSerialGC GCLogAnalysis`
+
+    `java -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:gc.demo.cms.ms1.mx1.1.log -Xms1g -Xmx1g -XX:+UseConcMarkSweepGC GCLogAnalysis`
+
+    `java -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:gc.demo.g1.ms1.mx1.1.log -Xms1g -Xmx1g -XX:+UseG1GC GCLogAnalysis`
+
+
