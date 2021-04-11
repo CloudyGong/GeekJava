@@ -18,6 +18,7 @@ public class HttpClientApp {
     public static void main(String[] args) throws IOException {
         // 请求地址
         String url = "http://localhost:8888";
+        url += "/happy";
         // 创建默认的客户端实例
         CloseableHttpClient httpClient = HttpClients.createDefault();
         // 创建get请求实例
